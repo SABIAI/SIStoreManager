@@ -25,6 +25,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import  Login from './screens/Login';
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
@@ -81,7 +83,7 @@ function App(): JSX.Element {
             screen and then come back to see your edits.
           </Section>
           {console.log('hello')}
-          
+          <Login/>
           <LearnMoreLinks />
         </View>
       </ScrollView>
