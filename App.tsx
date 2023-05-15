@@ -6,59 +6,16 @@
  */
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
-  View,
 } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import {
   Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
 import  Home from './screens/Home';
-
-const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
-
-
-function Feed() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
-    </View>
-  );
-}
-
-function Article() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Article Screen</Text>
-    </View>
-  );
-}
-
-function MyDrawer() {
-  return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Article" component={Article} />
-    </Drawer.Navigator>
-  );
-}
 
 
 function App(): JSX.Element {
@@ -69,19 +26,9 @@ function App(): JSX.Element {
   };
 
   return (
-    <NavigationContainer>
-      <MyDrawer />
-    </NavigationContainer>
+    <Home />
   );
 }
-
-// export default function App() {
-//   return (
-//     <NavigationContainer>
-//       <MyDrawer />
-//     </NavigationContainer>
-//   );
-// }
 
 const styles = StyleSheet.create({
   sectionContainer: {
