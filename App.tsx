@@ -14,6 +14,8 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 import  Home from './screens/Home';
 
@@ -26,7 +28,9 @@ function App(): JSX.Element {
   };
 
   return (
-    <Home />
+    <Provider store={store}>
+      <Home />
+    </Provider>
   );
 }
 
